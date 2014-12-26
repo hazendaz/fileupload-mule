@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf"
+    xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+    xmlns:mybatis="http://www.mulesoft.org/schema/mule/mybatis" xmlns:servlet="http://www.mulesoft.org/schema/mule/servlet"
+    xmlns:spring="http://www.springframework.org/schema/beans" version="CE-3.5.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/mybatis http://www.mulesoft.org/schema/mule/mybatis/current/mule-mybatis.xsd
+http://www.mulesoft.org/schema/mule/servlet http://www.mulesoft.org/schema/mule/servlet/current/mule-servlet.xsd">
+    <flow name="fileupload-muleFlow1" doc:name="fileupload-muleFlow1">
+        <servlet:inbound-endpoint path="hello"
+            responseTimeout="10000" doc:name="Servlet" />
+        <logger level="INFO" doc:name="Logger" message="#[message.payload]" />
+        <mybatis:begin-transaction />
+        <mybatis:end-transaction />
+        <custom-transformer class="com.hazendaz.transform.Transformer"
+            doc:name="Java" />
+        <cxf:proxy-service port="HelloWorldImplPort"
+            namespace="http://ws.hazendaz.com/" service="HelloWorldImplService"
+            payload="body" doc:name="SOAP" />
+    </flow>
+</mule>
