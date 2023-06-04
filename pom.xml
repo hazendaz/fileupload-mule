@@ -44,6 +44,10 @@
                     <artifactId>stax-api</artifactId>
                     <groupId>javax.xml.stream</groupId>
                 </exclusion>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
