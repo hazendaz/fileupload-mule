@@ -20,7 +20,7 @@
     <parent>
         <groupId>com.github.hazendaz</groupId>
         <artifactId>base-parent</artifactId>
-        <version>44</version>
+        <version>45</version>
     </parent>
     <artifactId>fileupload-mule</artifactId>
     <packaging>war</packaging>
