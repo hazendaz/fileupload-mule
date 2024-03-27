@@ -16,18 +16,28 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.github.hazendaz</groupId>
         <artifactId>base-parent</artifactId>
-        <version>44</version>
+        <version>45</version>
     </parent>
+
     <artifactId>fileupload-mule</artifactId>
     <packaging>war</packaging>
+
     <name>fileupload-mule</name>
     <description>Test project for fileupload mule</description>
     <url>http://localhost:8080/fileupload/</url>
     <inceptionYear>2013</inceptionYear>
+
+    <properties>
+        <!-- TODO: Drop back to extra enforcer 1.7.0 as 1.8.0 uses resolver and breaks this build -->
+        <extra-enforcer-rules.version>1.7.0</extra-enforcer-rules.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.mule</groupId>
@@ -264,6 +274,7 @@
         <!-- FUTURE USE <dependency> <groupId>org.mule.modules</groupId> <artifactId>mule-module-mybatis</artifactId> <version>1.0-SNAPSHOT</version> 
             </dependency> -->
     </dependencies>
+
     <build>
         <finalName>${project.name}</finalName>
         <resources>
