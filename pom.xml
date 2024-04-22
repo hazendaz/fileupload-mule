@@ -285,6 +285,7 @@
                 <directory>${project.basedir}/src/main/resources</directory>
             </resource>
         </resources>
+        <!-- TODO: This plugin is obsolete, review removing it as it uses mule items as extra setup -->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
