@@ -34,10 +34,10 @@
     <inceptionYear>2013</inceptionYear>
 
     <properties>
-        <java.version>11</java.version>
-        <java.release.version>11</java.release.version>
-        <java.test.version>11</java.test.version>
-        <java.test.release.version>11</java.test.release.version>
+        <java.version>17</java.version>
+        <java.release.version>17</java.release.version>
+        <java.test.version>17</java.test.version>
+        <java.test.release.version>17</java.test.release.version>
 
         <!-- TODO: Drop back to extra enforcer 1.7.0 as 1.8.0 uses resolver and breaks this build -->
         <extra-enforcer-rules.version>1.7.0</extra-enforcer-rules.version>
