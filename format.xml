@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     fileUploadResources (https://github.com/hazendaz/fileUploadResources)
@@ -14,7 +14,7 @@
         Hazendaz (Jeremy Landis).
 
 -->
-<mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.4.EE">
-    <name>fileupload-mule</name>
-    <description></description>
-</mule-project>
+<!DOCTYPE Format>
+<Format>
+ <!-- Dummy format file -->
+</Format>

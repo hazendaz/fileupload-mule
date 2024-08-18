@@ -1,7 +1,7 @@
 /*
  * fileUploadResources (https://github.com/hazendaz/fileUploadResources)
  *
- * Copyright 2013-2023 Hazendaz.
+ * Copyright 2013-2024 Hazendaz.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of The Apache Software License,
@@ -21,10 +21,9 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>
  * Java class for getHelloWorldResponse complex type.
- * 
  * <p>
  * The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="getHelloWorldResponse">
  *   &lt;complexContent>
@@ -36,8 +35,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getHelloWorldResponse", propOrder = { "_return" })
@@ -48,9 +45,8 @@ public class GetHelloWorldResponse {
 
     /**
      * Gets the value of the return property.
-     * 
+     *
      * @return possible object is {@link String }
-     * 
      */
     public String getReturn() {
         return this._return;
@@ -58,10 +54,9 @@ public class GetHelloWorldResponse {
 
     /**
      * Sets the value of the return property.
-     * 
+     *
      * @param value
      *            allowed object is {@link String }
-     * 
      */
     public void setReturn(final String value) {
         this._return = value;

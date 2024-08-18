@@ -1,7 +1,7 @@
 /*
  * fileUploadResources (https://github.com/hazendaz/fileUploadResources)
  *
- * Copyright 2013-2023 Hazendaz.
+ * Copyright 2013-2024 Hazendaz.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of The Apache Software License,
@@ -26,26 +26,23 @@ import javax.xml.namespace.QName;
  * The Java representation of XML content can consist of schema derived interfaces and classes representing the binding
  * of schema type definitions, element declarations and model groups. Factory methods for each of these are provided in
  * this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
 
     private static final QName _GetHelloWorldResponse_QNAME = new QName("http://ws.hazendaz.com/",
-                                                                    "getHelloWorldResponse");
-    private static final QName _GetHelloWorld_QNAME         = new QName("http://ws.hazendaz.com/", "getHelloWorld");
+            "getHelloWorldResponse");
+    private static final QName _GetHelloWorld_QNAME = new QName("http://ws.hazendaz.com/", "getHelloWorld");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package:
      * com.hazendaz.ws
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link GetHelloWorld }
-     * 
      */
     public GetHelloWorld createGetHelloWorld() {
         return new GetHelloWorld();
@@ -53,7 +50,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetHelloWorld } {@code >}
-     * 
      */
     @XmlElementDecl(namespace = "http://ws.hazendaz.com/", name = "getHelloWorld")
     public JAXBElement<GetHelloWorld> createGetHelloWorld(final GetHelloWorld value) {
@@ -62,7 +58,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GetHelloWorldResponse }
-     * 
      */
     public GetHelloWorldResponse createGetHelloWorldResponse() {
         return new GetHelloWorldResponse();
@@ -70,7 +65,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <} {@link GetHelloWorldResponse }{@code >}
-     * 
      */
     @XmlElementDecl(namespace = "http://ws.hazendaz.com/", name = "getHelloWorldResponse")
     public JAXBElement<GetHelloWorldResponse> createGetHelloWorldResponse(final GetHelloWorldResponse value) {
