@@ -1,7 +1,7 @@
 /*
  * fileUploadResources (https://github.com/hazendaz/fileUploadResources)
  *
- * Copyright 2013-2024 Hazendaz.
+ * Copyright 2013-2025 Hazendaz.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of The Apache Software License,
@@ -17,9 +17,9 @@ package com.hazendaz.ws;
  * Please modify this class to meet your needs
  * This class is not complete
  */
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Path;
 
 import javax.xml.namespace.QName;
 
@@ -33,10 +33,10 @@ public final class HelloWorld_HelloWorldImplPort_Client {
     public static void main(final String[] args) throws Exception {
         URL wsdlURL = HelloWorldImplService.WSDL_LOCATION;
         if (args.length > 0 && args[0] != null && !"".equals(args[0])) {
-            final File wsdlFile = new File(args[0]);
+            final Path wsdlFile = Path.of(args[0]);
             try {
-                if (wsdlFile.exists()) {
-                    wsdlURL = wsdlFile.toURI().toURL();
+                if (wsdlFile.toFile().exists()) {
+                    wsdlURL = wsdlFile.toUri().toURL();
                 } else {
                     wsdlURL = new URL(args[0]);
                 }
