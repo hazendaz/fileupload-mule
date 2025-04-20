@@ -3,7 +3,7 @@
 
     fileUploadResources (https://github.com/hazendaz/fileUploadResources)
 
-    Copyright 2013-2024 Hazendaz.
+    Copyright 2013-2025 Hazendaz.
 
     All rights reserved. This program and the accompanying materials
     are made available under the terms of The Apache Software License,
@@ -74,8 +74,12 @@
                     <artifactId>stax-api</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-jcl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -256,12 +260,12 @@
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
             <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.3.5</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.resource</groupId>
